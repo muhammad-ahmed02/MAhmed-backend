@@ -38,7 +38,7 @@ INSTALLED_APPS = [
 
     'corsheaders',
 
-    # 'froala_editor',
+    'froala_editor',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
