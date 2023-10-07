@@ -7,6 +7,7 @@ class ProjectSerializer(ModelSerializer):
     class Meta:
         model = Project
         fields = '__all__'
+        depth = 1
 
 
 class TechnologySerializer(ModelSerializer):
@@ -25,3 +26,9 @@ class ContactSerializer(ModelSerializer):
     class Meta:
         model = Contact
         fields = '__all__'
+
+
+class LearningSerializer(ModelSerializer):
+    class Meta:
+        model = Learning
+        fields = "__all__"

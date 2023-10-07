@@ -28,17 +28,17 @@ INSTALLED_APPS = [
     'content.apps.ContentConfig',
 
     'rest_auth',
-    'rest_auth.registration',
+    # 'rest_auth.registration',
 
-    'allauth',
-    'allauth.account',
+    # 'allauth',
+    # 'allauth.account',
 
     'rest_framework',
-    'rest_framework.authtoken',
+    # 'rest_framework.authtoken',
 
     'corsheaders',
 
-    'froala_editor',
+    # 'froala_editor',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -70,7 +70,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-CORS_ALLOW_METHODS = ["DELETE", "GET", "POST", "PUT", "PATCH"]
+CORS_ALLOW_METHODS = ["GET", "POST"]
 CORS_ALLOW_HEADERS = (
     "accept",
     "accept-encoding",
