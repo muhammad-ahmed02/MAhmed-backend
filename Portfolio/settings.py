@@ -1,19 +1,18 @@
 from pathlib import Path
-from .Secret import SECRET
 
 import os
-# import django_on_heroku
+import django_on_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET['KEY']
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mahmed135.pythonanywhere.com", "localhost"]
+ALLOWED_HOSTS = ["mahmed-27d24cd5e028.herokuapp.com", "localhost"]
 
 # Application definition
 
@@ -110,29 +109,12 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 
 # DATABASES = {
 #     "default": {
-#         "ENGINE":
-#         "django.db.backends.postgresql_psycopg2",
-#         "HOST":
-#         "ec2-52-19-170-215.eu-west-1.compute.amazonaws.com",
-#         "NAME":
-#         "d3qm2a1evrrsvb",
-#         "PORT":
-#         "5432",
-#         "USER":
-#         "dhyefxisrbmxom",
-#         "PASSWORD":
-#         "41c24df89e713df3c014b5317e0abb8e8c8ce6935fe0b892953874a76e5f0091",
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": "db.sqlite3"
 #     }
 # }
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "db.sqlite3"
-    }
-}
-
-# django_on_heroku.settings(locals())
+django_on_heroku.settings(locals())
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
