@@ -27,7 +27,7 @@ INSTALLED_APPS = [
 
     'content.apps.ContentConfig',
 
-    'rest_auth',
+    # 'rest_auth',
     # 'rest_auth.registration',
 
     # 'allauth',
